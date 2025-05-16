@@ -1,38 +1,329 @@
-.App {
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  margin: 10px;
+  border: none;
+  border-bottom: .5px solid #e2e2e2;
+}
+
+select {
+  margin: 5px;
+  border: none;
+  border-bottom: .5px solid #e2e2e2;
+}
+
+label {
+  width: 20%;
+}
+
+.preview {
+  /* background-image: url(/public/assets/images/bg.png); */
+  background-size: cover;
+  height: 350px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.preview p {
+  width: 50%;
+}
+
+.colorWhite {
+  /* color: white; */
+  color: #f19a3c;
+}
+
+button {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid;
+  margin-top: 10px;
+  font-size: 18px;
+  border-radius: 100px;
+  border-color: rgb(43, 134, 134);
+  background-color: #ffda73;
+}
+
+button:hover {
+  background-color: rgb(43, 134, 134);
+  color: white;
+  font-size: 20px;
+  transition: all 0.4s;
+}
+
+/* .img-holder{
+  border: 2px solid #e2e2e2; 
+} */
+
+.img-holder img {
+  width: 33.33%;
+  padding: 5px;
+  border: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+
+/* glassmorphism */
+body {
+  background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+  background-attachment: fixed;
+}
+
+section .color {
+  position: absolute;
+  filter: blur(150px);
+
+}
+
+section .color:nth-child(1) {
+  top: -350px;
+  width: 600px;
+  height: 600px;
+  background: #ff359b;
+}
+
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: #fffd87;
+}
+
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background: #00d2ff;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  /* border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2); */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* glassmorphism */
+
+.sk{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 430px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  label {
+    width: 26%;
+  }
+
+  .preview {
+    /* background-image: url(/public/assets/images/bg.png); */
+    background-size: cover;
+    height: 220px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  section .color {
+    position: absolute;
+    filter: blur(150px);
+  }
+
+  section .color:nth-child(1) {
+    top: -10px;
+    width: 355px;
+    height: 250px;
+    background: #ff359b;
+  }
+
+  section .color:nth-child(2) {
+    bottom: -54px;
+    left: 108px;
+    width: 259px;
+    height: 325px;
+    background: #fffd87;
+  }
+
+  section .color:nth-child(3) {
+    bottom: -466px;
+    right: 71px;
+    width: 287px;
+    height: 493px;
+    background: #00d2ff;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 375px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  label {
+    width: 26%;
+  }
+  
+  input {
+    font-size: 14px;
+  }
+
+  .preview {
+    /* background-image: url(/public/assets/images/bg.png); */
+    background-size: cover;
+    height: 220px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  section .color {
+    position: absolute;
+    filter: blur(150px);
+  }
+
+  section .color:nth-child(1) {
+    top: -10px;
+    width: 355px;
+    height: 250px;
+    background: #ff359b;
+  }
+
+  section .color:nth-child(2) {
+    bottom: -54px;
+    left: 108px;
+    width: 259px;
+    height: 325px;
+    background: #fffd87;
+  }
+
+  section .color:nth-child(3) {
+    bottom: -466px;
+    right: 71px;
+    width: 287px;
+    height: 493px;
+    background: #00d2ff;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.sk{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 350px) {
+  .row {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .col-md-6 {
+    width: 100%;
+    margin-bottom: 10px;
   }
+
+  label {
+    width: 26%;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .preview {
+    /* background-image: url(/public/assets/images/bg.png); */
+    background-size: cover;
+    height: 190px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  section .color {
+    position: absolute;
+    filter: blur(150px);
+  }
+
+  section .color:nth-child(1) {
+    top: -10px;
+    width: 355px;
+    height: 250px;
+    background: #ff359b;
+  }
+
+  section .color:nth-child(2) {
+    bottom: -54px;
+    left: 108px;
+    width: 259px;
+    height: 325px;
+    background: #fffd87;
+  }
+
+  section .color:nth-child(3) {
+    bottom: -466px;
+    right: 71px;
+    width: 287px;
+    height: 493px;
+    background: #00d2ff;
+  }
+}
+
+.sk{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: center;
 }
